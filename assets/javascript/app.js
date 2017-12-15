@@ -19,6 +19,8 @@ var answer4;
 $("#start").on("click", startTimer);
 $("#submit").on("click",checkAnswers);
 
+$("#questions").hide();
+
 
 //console.log(check);
 
@@ -42,9 +44,9 @@ function timeUp(){
 
 function checkAnswers(){
 
-
-console.log($("input[name='buttonList']:checked").val());
-console.log($("input[name='buttonList2']:checked").val());
+	clearInterval(intervalId);
+//console.log($("input[name='buttonList']:checked").val());
+//console.log($("input[name='buttonList2']:checked").val());
 
 //console.log($("input[name='buttonList2']:checked").val());
 
@@ -112,7 +114,9 @@ function timer(){
 
 function startTimer() {
 
-$("#questions").children().attr("enabled","enabled");
+	$("#questions").show();
+
+	$("#questions").children().attr("enabled","enabled");
 
 // DONE: Use setInterval to start the count here and set the clock to running.
 	if (!clockRunning) {
