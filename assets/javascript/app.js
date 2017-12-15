@@ -17,20 +17,16 @@ var answer4;
 
 
 $("#start").on("click", startTimer);
-$("#submit").on("click", checkAnswers);
+$("#submit").on("click",checkAnswers);
 
-function checkAnswers(){
-var check = $("#buttonA1").checked;
-};
+
 //console.log(check);
 
 //console.log($("#buttonList"+$(":checked")[0].id).text());
 
-console.log($("input[name=buttonList]:checked").val());
+//console.log($("input:checked").val());
 
-//console.log($("input[name=buttonList2]:checked").val());
 
-//$("#label"+$(":checked")[0].id).text()
 
 
 function timeUp(){
@@ -40,26 +36,58 @@ function timeUp(){
 	$("#questions").children().attr("disabled","disabled");
 	checkAnswers;
 
+
 };
 
 
 function checkAnswers(){
 
+
+console.log($("input[name='buttonList']:checked").val());
+console.log($("input[name='buttonList2']:checked").val());
+
+//console.log($("input[name='buttonList2']:checked").val());
+
+//$("#label"+$(":checked")[0].id).text()("input[type='radio")
+//console.log($("input[type='radio'][name='buttonList']:checked").val());
+
+//console.log($("input[type='radio'][name='buttonList2']:checked").val());	
+
 	answer1 = $("input[name=buttonList]:checked").val();
-	answer1 = $("input[name=buttonList2]:checked").val();
-	answer1 = $("input[name=buttonList3]:checked").val();
-	answer1 = $("input[name=buttonList4]:checked").val();
+	answer2 = $("input[name=buttonList2]:checked").val();
+	answer3 = $("input[name=buttonList3]:checked").val();
+	answer4 = $("input[name=buttonList4]:checked").val();
+
+
+	answersWrong=4;
 
 	if (answer1=="Luke") {
 		answersRight++;
-	} else { 
-   		answersWrong++;
+		answersWrong--;
 	};
 
-	console.log($("input[name=buttonList4]:checked").val());
+	if (answer2=="Hook") {
+		answersRight++;
+		answersWrong--;
+	};
+
+	if (answer3=="Vadim") {
+		answersRight++;
+		answersWrong--;
+	};	
+
+	if (answer4=="Batman") {
+		answersRight++;
+		answersWrong--;
+	};		
+
+	//console.log($("input[name=buttonList4]:checked").val());
 
 
 	$("#correct").text("Correct Answers: " + answersRight);
+	$("#incorrect").text("Incorrect Answers: " + answersWrong);	
+
+	$("#questions").empty();
 
 
 };
