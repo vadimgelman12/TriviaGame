@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Trivia Game!</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/style.css">	
+
+
+</head>
+<body background = "http://2.bp.blogspot.com/-F8SgBirV4P4/Uh98BRg1f_I/AAAAAAAAGSE/xwHJqn4RDTs/s1600/Background-Questions1.jpg">
+
+	<nav class="navbar navbar-default" style="background:gray">
+  		<div class="container">
+    	<!-- Brand and toggle get grouped for better mobile display -->
+    		<div class="navbar-header">
+      			<!-- <a class="navbar-brand" style="background:green; color:white">Start Game</a> -->
+      			<button type="button" id="start" class="btn btn-success">Start Game</button>
+    		</div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      			<ul class="nav navbar-nav navbar-right">
+      				<div id="display2">Seconds Remaining:</div>
+      				<div id="display">60</div>
+      			</ul>
+    		</div><!-- /.navbar-collapse -->
+  		</div><!-- /.container-fluid -->
+	</nav>	
+<div class="container" id="wrapper">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8" style="background:white" id="main-body">
+			<div class="page-header">
+  				<h3 style="color:#4aaaa5">Can you correctly answer all the following trivia questions?</h1>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12" id="questions" style="background:white">
+					<!-- <img class="col-md-3" src="assets/images/cat.jpg" height="150" width="150"> -->
+					<div class="col-md-8">
+						<p>	What is Darth Vader's son's name?</p>
+<!-- 						<label class="radio-inline">
+					      <input type="radio" name="buttonList" value="Luke">Luke
+					    </label>				    
+
+						<label class="radio-inline">
+					      <input type="radio" name="buttonList" value="Yoda">Yoda
+					    </label>
+						<label class="radio-inline">
+					      <input type="radio" name="buttonList" value="Han">Han
+					    </label> -->
+
+					    <input type="radio" name="buttonList" value="Luke">Luke
+					    <input type="radio" name="buttonList" value="Yoda">Yoda
+					    <input type="radio" name="buttonList" value="Han">Han
+
+					    <br>
+					    <br>
+
+						<p>	What is the captain's name in Peter Pan?</p>
+						<label class="radio-inline">
+					      <input type="radio" name="buttonList2">Picard
+					    </label>
+
+						<label class="radio-inline">
+					      <input type="radio" name="buttonList2">America
+					    </label>
+						<label class="radio-inline">
+					      <input type="radio" name="buttonList2">Hook
+					    </label>	
+
+					    <br>
+					    <br>				    
+
+						<p>	Which of these is not a superhero?</p>
+						<label class="radio-inline">
+					      <input type="radio" name="buttonList3">Spiderman
+					    </label>
+
+						<label class="radio-inline">
+					      <input type="radio" name="buttonList3">Batman
+					    </label>
+						<label class="radio-inline">
+					      <input type="radio" name="buttonList3">Vadim
+					    </label>	
+
+					    <br>
+					    <br>					    
+
+						<p> Who is Bruce Wayne in real life?</p>
+						<label class="radio-inline">
+					      <input type="radio" name="buttonList4">Batman
+					    </label>
+
+						<label class="radio-inline">
+					      <input type="radio" name="buttonList4">Superman
+					    </label>
+						<label class="radio-inline">
+					      <input type="radio" name="buttonList4">Spiderman
+					    </label>	
+
+					    <br>
+					    <br>					    
+
+						<button type="button" id="submit" class="btn btn-danger">Submit</button>
+
+
+					</div>
+
+				</div>
+			</div>
+
+
+		</div>
+
+		<div class="col-xs-4">
+			<div class="panel panel-default" id="connect-with" style= "text-align: center">
+  				<div class="panel-heading">
+    				<h3 class="panel-title" style="color:#4aaaa5">Score</h3>
+  				</div>
+  				<div class="panel-body">
+			        <p id="correct">Correct Answers: 0</p>
+
+			        <p id="incorrect">Incorrect Answers: 0</p>
+  				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="push"></div>
+</div>
+
+
+<footer>
+		&copy;Copyright 2017 Vadim Gelman
+</footer>
+<!-- 	<div class = "container">
+
+		<p>	What is Darth Vader's son's name?</p>
+
+		<label>
+		    <input type="radio" id="buttonA1" name="buttonList" value="Luke"/>Luke
+		</label>
+		<label>
+		    <input type="radio" name="buttonList" value="Yoda"/>Yoda
+		</label>
+		<label>
+		    <input type="radio" name="buttonList" value="Han"/>Han
+		</label>
+
+
+		<p>	What is 2+2?</p>
+		<label>
+		    <input type="radio" name="buttonList2" value="2"/>2
+		</label>
+		<label>
+		    <input type="radio" name="buttonList2" value="4"/>4
+		</label>
+		<label>
+		    <input type="radio" name="buttonList2" value="6"/>6
+		</label>		
+
+
+
+		<button type="button" id="submit" onclick="checkAnswers()">Submit</button>
+
+
+	</div> -->
+
+
+	<!-- JAVASCRIPT  -->
+	<!-- ========================================= -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script  type='text/javascript' src='assets/javascript/app.js'></script>	
+</body>
+</html>
